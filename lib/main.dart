@@ -1,8 +1,9 @@
-import 'package:arsa_02/pages/groupInfo.dart';
-import 'package:arsa_02/pages/home.dart';
-import 'package:arsa_02/pages/splashscreen.dart';
-import 'package:arsa_02/pages/result.dart';
+
+
 import 'package:flutter/material.dart';
+
+import 'Pages/import_pages.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -14,14 +15,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-        initialRoute: '/home',
-        routes : {
-          '/home': (context) => Home(),
-          '/result': (context) => Result(),
-          '/groupInformation': (context) => GroupInfo()
-    }
+      initialRoute:  '/loading',
+      routes : {
+        '/loading' : (context) => Loading(),
+        '/home' : (context) => Home(),
+        '/about' : (context) => About(),
+        '/graphs' : (context) => Graphs(),
+        '/overview' : (context) => Overview(),
+        '/mlModelDescription' : (context) => MlModelDescription(),
+        '/licences' : (context) => Licences(),
+        '/groupInformation' : (context) => GroupInformation(),
+        '/respLoading' : (context) => RespLoading()
+
+      }
     );
   }
 }
-
-
